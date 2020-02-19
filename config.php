@@ -10,7 +10,7 @@ return [
 
         'password' => 'iamadmin8853',
 
-        'connection' => 'mysql:host=localhost; port=3306;',
+        'connection' => "mysql:host=localhost; port=3306",
 
         'options' => [
 

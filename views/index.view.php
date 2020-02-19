@@ -3,9 +3,14 @@
 
 
 <ul>
+
     <?php foreach($todos as $todo) : ?>
         
-        <li> <?=$todo ?> </li>
+        <li>
+        
+            <?= $todo->description; ?> 
+            
+        </li>
 
     <?php endforeach; ?>
 

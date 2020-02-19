@@ -1,9 +1,20 @@
 <?php
 
+/* bootstrap and set up project */
 $query = require 'bootstrap.php';
 
 
-$todos = $query->selectAll('todo', 'Todo');
+/* setup routes */
+
+$routes = [
 
 
-require 'index.view.php';
+    '' => 'Controllers/index.php',
+
+    'about' => 'Controllers/about.php',
+
+    'contact' => 'Controllers/contact.php',
+
+    'portfolio' => 'Controllers/portfolio'
+
+];

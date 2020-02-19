@@ -11,7 +11,7 @@ class Connection
 
             return new PDO(
 
-                $config['connection'].':dbname='.$config['dbname'], 
+                $config['connection'].';dbname='.$config['dbname'], 
                 
                 $config['username'],
                 
@@ -20,6 +20,8 @@ class Connection
                 $config['options']
               
             );
+
+            echo 'connection extablished';
        
         } catch(PDOException $e) {
 

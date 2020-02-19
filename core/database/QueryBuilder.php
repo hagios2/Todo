@@ -1,6 +1,5 @@
 <?php
 
-require 'Todo.php';
 
 class QueryBuilder 
 {
@@ -8,21 +7,21 @@ class QueryBuilder
     protected $pdo; 
 
 
-    public function __construct($pdo)
+    public function __construct(PDO $pdo)
     {
         $this->pdo = $pdo;
     }
 
     
     
-    public function selectAll($table, $intoClass)
+    public function selectAll($table)
     {
 
         $statement = $this->pdo->prepare("SELECT * FROM {$table}");
 
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_CLASS, $intoClass);
+        return $statement->fetchAll(PDO::FETCH_CLASS);
 
     }
 
