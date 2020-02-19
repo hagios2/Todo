@@ -4,15 +4,18 @@ return [
 
     'database' => [
 
-        'dbname' => 'todosss',
+        'dbname' => 'mytodo',
 
         'username' => 'admin',
 
         'password' => 'iamadmin8853',
 
-        'connection' => 'mysql:host=127.0.0.1',
+        'connection' => 'mysql:host=localhost; port=3306;',
 
-        'options' => []
+        'options' => [
+
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ]
 
     ]
 
