@@ -1,20 +1,12 @@
 <?php
 
+
+
 /* bootstrap and set up project */
-$query = require 'bootstrap.php';
+$query = require 'core/bootstrap.php';
 
 
-/* setup routes */
 
-$routes = [
+require Router::load('routes.php')
 
-
-    '' => 'Controllers/index.php',
-
-    'about' => 'Controllers/about.php',
-
-    'contact' => 'Controllers/contact.php',
-
-    'portfolio' => 'Controllers/portfolio'
-
-];
+    ->direct(Request::url());

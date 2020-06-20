@@ -2,7 +2,7 @@
 
 
 
-$todos = $query->selectAll('todo');
+$todos = $app['database']->selectAll('todo');
 
 
 
